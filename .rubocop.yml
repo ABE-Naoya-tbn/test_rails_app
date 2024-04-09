@@ -1,0 +1,137 @@
+require:
+  - rubocop-factory_bot
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+StringLiterals:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 28
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/BlockLength:
+  Exclude:
+    - "config/**/*"
+    - "db/**/*"
+    - "spec/**/*"
+    - "lib/tasks/**/*.rake"
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/PerceivedComplexity:
+  Max: 12
+
+Layout/LineLength:
+  Max: 160
+  Exclude:
+    - "config/**/*"
+    - "db/**/*"
+    - "spec/**/*"
+    - "bin/*"
+Style/IdenticalConditionalBranches:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/IfWithSemicolon:
+  Enabled: false
+
+Style/InfiniteLoop:
+  Enabled: false
+
+Lint/EmptyBlock:
+  Enabled: false
+
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 7
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Rails/HelperInstanceVariable:
+  Enabled: false
+
+# いずれ全部localeに移したい
+Rails/I18nLocaleTexts:
+  Enabled: false
+
+Rails/DynamicFindBy:
+  Whitelist:
+    - find_by_public_id
+    - find_by_public_id!
+    - find_by_email
+    - find_by_email!
+    - find_by_last_name
+    - find_by_first_name
+    - find_by_last_name_kana
+    - find_by_first_name_kana
+    - find_by_hashid
+    - find_by_hashid!
+    - find_by_sql
+    - find_by_uid
+    - find_by_uid!
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/VerifiedDoubles:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+Layout/FirstHashElementIndentation:
+  Enabled: false
+
+Style/WordArray:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/ExpandPathArguments:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/SymbolProc:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: false
+
+Style/RedundantParentheses:
+  Enabled: false
+
+Naming/PredicateName:
+  Enabled: false

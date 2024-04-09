@@ -1,0 +1,28 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV["DB_DEVELOP_USERNAME"] %>
+  password: <%= ENV["DB_DEVELOP_PASSWORD"] %>
+  host:  <%= ENV['DB_DEVELOP_HOST'] %>
+  ssl_mode: disabled
+  sslverify: false
+
+development:
+  <<: *default
+  database: test_rails_app_development
+
+test:
+  <<: *default
+  username: <%= ENV["DB_TEST_USERNAME"] %>
+  password: <%= ENV["DB_TEST_PASSWORD"] %>
+  host:  <%= ENV['DB_TEST_HOST'] %>
+  database: test_rails_app_test
+
+production:
+  <<: *default
+  username: <%= ENV["DB_PROD_USERNAME"] %>
+  password: <%= ENV["DB_PROD_PASSWORD"] %>
+  host:  <%= ENV['DB_PROD_HOST'] %>
+  database: test_rails_app_production
+  socket: /var/lib/mysql/mysql.sock

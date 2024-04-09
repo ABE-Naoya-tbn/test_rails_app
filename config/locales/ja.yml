@@ -1,0 +1,16 @@
+ja:
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
+  activerecord:
+    attribute:
+      operators:
+        username: ユーザー名
+        password: パスワード
+        email: メールアドレス
+      todo_list_item:
+        text: テキスト
+    errors:
+      models:
+        operators:
+          blank: が未入力です
