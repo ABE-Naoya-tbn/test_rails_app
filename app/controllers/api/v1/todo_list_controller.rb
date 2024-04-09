@@ -48,7 +48,7 @@ module Api::V1
     private
 
     def todo_list_item_params
-      params.require(:todo_list_item).permit(:content, :status)
+      params.require(:todo_list_item).permit(:content, :state)
     end
 
     def set_todo_list_item

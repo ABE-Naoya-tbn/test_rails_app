@@ -7,11 +7,11 @@ RSpec.describe TodoListItem do
     let(:todo_list_item) do
       described_class.new(
         content:,
-        status:
+        state:
       )
     end
     let(:content) { '今日やること' }
-    let(:status) { true }
+    let(:state) { 0 }
 
     context '登録の場合' do
       context 'content' do
